@@ -8,91 +8,91 @@ import { motion } from "framer-motion";
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1588776814546-1b8c1dd32307?q=80&w=2070&auto=format&fit=crop",
+    src: "/IMG_7636.jpg",
     alt: "Modern dental clinic reception area",
     span: "row-span-2",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop",
+    src: "/IMG_7639.jpg",
     alt: "Professional dental tools and equipment",
     span: "row-span-1",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974&auto=format&fit=crop",
+    src: "/IMG_7640.jpg",
     alt: "Happy patient with beautiful smile",
     span: "row-span-1",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop",
+    src: "/IMG_7641.jpg",
     alt: "State-of-the-art dental examination room",
     span: "row-span-2",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974&auto=format&fit=crop",
+    src: "/IMG_7642.jpg",
     alt: "Patient receiving quality dental care",
     span: "row-span-1",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1629909615957-be38b9e556a6?q=80&w=2068&auto=format&fit=crop",
+    src: "/IMG_7643.jpg",
     alt: "Sterilized dental hygiene instruments",
     span: "row-span-1",
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1974&auto=format&fit=crop",
+    src: "/IMG_7644.jpg",
     alt: "Dentist consulting with patient",
     span: "row-span-2",
   },
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop",
+    src: "/IMG_7645.jpg",
     alt: "Luxury dental clinic interior design",
     span: "row-span-1",
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=2069&auto=format&fit=crop",
+    src: "/IMG_7646.jpg",
     alt: "Comfortable waiting area with modern amenities",
     span: "row-span-1",
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?q=80&w=2070&auto=format&fit=crop",
+    src: "/IMG_7649.jpg",
     alt: "Advanced dental treatment room",
     span: "row-span-2",
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1609840114035-3c981407e31f?q=80&w=2070&auto=format&fit=crop",
+    src: "/IMG_7636.jpg",
     alt: "Premium dental chair and equipment",
     span: "row-span-1",
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop",
+    src: "/IMG_7639.jpg",
     alt: "Precision dental instruments",
     span: "row-span-1",
   },
   {
     id: 13,
-    src: "https://images.unsplash.com/photo-1588776814546-1b8c1dd32307?q=80&w=2070&auto=format&fit=crop",
+    src: "/IMG_7640.jpg",
     alt: "Welcoming reception desk",
     span: "row-span-1",
   },
   {
     id: 14,
-    src: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974&auto=format&fit=crop",
+    src: "/IMG_7641.jpg",
     alt: "Satisfied patient after treatment",
     span: "row-span-2",
   },
   {
     id: 15,
-    src: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop",
+    src: "/IMG_7642.jpg",
     alt: "Clean and modern treatment space",
     span: "row-span-1",
   },
@@ -103,12 +103,12 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="py-24 bg-white scroll-mt-20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+      <div className="container px-6 mx-auto">
+        <div className="mb-16 text-center">
           <Reveal width="100%">
-            <h4 className="text-forest-600 font-bold tracking-widest uppercase text-sm mb-2">Our Space</h4>
-            <h2 className="text-4xl md:text-5xl font-serif text-forest-950">A Sanctuary for Your Smile</h2>
-            <p className="text-gray-600 text-lg mt-4 max-w-2xl mx-auto">
+            <h4 className="mb-2 text-sm font-bold tracking-widest uppercase text-forest-600">Our Space</h4>
+            <h2 className="font-serif text-4xl md:text-5xl text-forest-950">A Sanctuary for Your Smile</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
               Step into our spa-like environment designed for your comfort and relaxation.
             </p>
           </Reveal>
@@ -141,25 +141,16 @@ export default function Gallery() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: hoveredId === image.id ? 1 : 0 }}
                 transition={{ duration: 0.3 }}
-                className="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-forest-900/40 to-transparent flex items-end p-6"
+                className="flex absolute inset-0 items-end p-6 bg-gradient-to-t to-transparent from-forest-950/80 via-forest-900/40"
               >
-                <p className="text-white font-serif text-lg">{image.alt}</p>
+                <p className="font-serif text-lg text-white">{image.alt}</p>
               </motion.div>
 
               {/* Decorative Corner */}
-              <div className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-white/30 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-tr-2xl border-t-2 border-r-2 opacity-0 transition-opacity border-white/30 group-hover:opacity-100" />
             </motion.div>
           ))}
         </div>
-
-        {/* Note for User */}
-        <Reveal delay={0.5}>
-          <div className="mt-12 text-center">
-            <p className="text-gray-500 text-sm italic">
-              These are placeholder images. Replace them with your actual clinic photos for the best experience.
-            </p>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

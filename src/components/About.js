@@ -16,7 +16,7 @@ export default function About() {
                <Reveal delay={0.2} width="100%">
                   <div className="absolute top-0 left-0 w-2/3 h-3/4 rounded-3xl overflow-hidden shadow-xl z-10">
                     <Image
-                        src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop"
+                        src="/IMG_7643.jpg"
                         alt="Dental tools"
                         fill
                         className="object-cover"
@@ -27,7 +27,7 @@ export default function About() {
                <Reveal delay={0.4} width="100%">
                   <div className="absolute bottom-0 right-0 w-2/3 h-3/4 rounded-3xl overflow-hidden shadow-2xl z-20 border-8 border-sand-50">
                      <Image
-                        src="https://images.unsplash.com/photo-1588776814546-1b8c1dd32307?q=80&w=1974&auto=format&fit=crop"
+                        src="/IMG_7644.jpg"
                         alt="Doctor and patient"
                         fill
                         className="object-cover"
